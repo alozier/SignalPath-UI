@@ -1,24 +1,21 @@
-SignalPath, LLC.
-UI Engineering Code Assessment
-Rank each of the following languages and frameworks on a 4 point scale, where 1 = "I've been paid to write production quality code with it." and 4 = "I could write a Hello World web application if I had a tutorial."
-Angular (2+) - 1
-AngularJS (1.x) - 1
-React - 4
-Vue - 4 
-Ember - 4
-Node.js - 1
-Python - 4
-PHP - 2
-Scala - 4
-Clojure - 4
-Haskell - 4
-Golang - 4
-Ruby - 3
-Perl - 4
-Java - 2
-Chef - 4
+-Angular (2+) - 1
+-AngularJS (1.x) - 1
+-React - 4
+-Vue - 4 
+-Ember - 4
+-Node.js - 1
+-Python - 4
+-PHP - 2
+-Scala - 4
+-Clojure - 4
+-Haskell - 4
+-Golang - 4
+-Ruby - 3
+-Perl - 4
+-Java - 2
+-Chef - 4
 
-[Angular] Using this SpaceX API, create an Angular application that shows a list of SpaceX launches in a sortable (by launch order) grid. The user should be able to page through the results. The columns of the grid should be Flight Number, Launch Year, Rocket Name, and Details. For a given launch, the user should be able to click on the row to navigate to the presskit for that launch using the url provided in the API response.
+1. [Angular] Using this SpaceX API, create an Angular application that shows a list of SpaceX launches in a sortable (by launch order) grid. The user should be able to page through the results. The columns of the grid should be Flight Number, Launch Year, Rocket Name, and Details. For a given launch, the user should be able to click on the row to navigate to the presskit for that launch using the url provided in the API response.
 
 # Spacexlaunch
 
