@@ -1,0 +1,38 @@
+  <div class="title"><h1>SpaceX Launches</h1></div>
+  <div>
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <!-- Flight Number Column -->
+      <ng-container matColumnDef="flight_number">
+        <mat-header-cell *matHeaderCellDef mat-sort-header class="launch"> Flight Number </mat-header-cell>
+        <mat-cell *matCellDef="let launch"> {{launch.flight_number}} </mat-cell>
+      </ng-container>
+
+      <!-- Launch Year Column -->
+      <ng-container matColumnDef="launch_year">
+        <mat-header-cell *matHeaderCellDef mat-sort-header class="launch"> Launch Year </mat-header-cell>
+        <mat-cell *matCellDef="let launch"> {{launch.launch_year}} </mat-cell>
+      </ng-container>
+
+      <!-- Rocket Name Column-->
+      <ng-container matColumnDef="rocket_name">
+        <mat-header-cell *matHeaderCellDef> Rocket Name </mat-header-cell>
+        <mat-cell *matCellDef="let launch"> {{launch.rocket.rocket_name}} </mat-cell>
+      </ng-container>
+
+      <!-- Details Column -->
+      <ng-container matColumnDef="details">
+        <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
+        <mat-cell *matCellDef="let launch"> {{launch.details}} </mat-cell>
+      </ng-container>
+
+      <!-- Creates color alternated, clickable rows that open SpaceX presskits when present 
+      with the API data under the appropriate columns-->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let launch; let even = even; columns: displayedColumns;" 
+      [ngClass]="{gray: even}" (click)="goToURL(launch)" class="row-launch"></mat-row>
+    </table>
+
+    <!-- Adds pagination at bottom of table -->
+    <mat-paginator class="paginator-sticky" [pageSize]="25" [pageSizeOptions]="[10, 25, 50]" showFirstLastButtons></mat-paginator>
+    </div>
